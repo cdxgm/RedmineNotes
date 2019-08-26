@@ -12,3 +12,6 @@
 - redmine所在服务器增加crontab 定时任务，定期从remote仓库 fetch更新local仓库内容来实现redmine能够查看最新在提交内容（伪实时）
 
 ## GitHub帮助中有[同步代码仓库方法](https://help.github.com/en/articles/duplicating-a-repository)
+## 第四次提交，redmine所在服务器针对redmine用户创建crontab定时任务，定时执行 从remote仓库fetch code到本地仓库的**脚本**
+	- 先在仓库的.git 目录下编写 fetch脚本，chmod 可执行 chown 变更文件所属人为redmine
+	- crontab -uredmine -e 编写定时任务
